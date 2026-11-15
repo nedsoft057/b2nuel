@@ -615,9 +615,58 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
 @media (max-width:820px){.ghead,.grow{grid-template-columns:96px minmax(0,1fr) auto;gap:12px;padding:12px 14px}.ghead{display:none}.gch,.hide-m{display:none}.gt b{font-size:15.5px}.gt small{font-size:12.5px}.go{height:30px;padding:0 10px;font-size:12px}}
 .pc .im .th .fg{object-fit:contain;object-position:50% 50%;width:100%;height:100%}.pc .im .th .bgx{object-fit:cover;width:124%;height:124%}
 .thumbs{display:flex;justify-content:center}.thumbs button{width:calc((100% - 32px)/5);flex:none}
-@media (max-width:900px){.cvis{padding-top:84px}}
+@media (max-width:900px){.cvis{padding-top:94px}}
 @media (max-width:600px){.sv{min-height:0;padding:20px}.sv h4{padding-top:18px;margin-top:0}.cap h4{margin-top:18px}}
 .embed .tw{display:block;position:absolute;left:0;top:0;width:100%;opacity:0;pointer-events:none}.embed.ready .tw{position:relative;opacity:1;pointer-events:auto}
+
+/* modal shows the actual screenshot */
+.embed .fallback{max-height:min(62vh,640px);overflow:auto;background:#000;border:1px solid var(--line);border-radius:14px;overscroll-behavior:contain}
+.embed .fallback img{width:100%;height:auto;display:block}
+.embed .tw{display:none!important}
+/* text-only post cards */
+.th.tx{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;padding:8% 9%;background:radial-gradient(90% 90% at 85% 0%,rgba(74,123,255,.55),transparent 60%),linear-gradient(150deg,#14205e,#070b26)}
+.th.tx::before{display:none}
+.pc-h{display:flex;align-items:center;gap:8px;width:100%;color:#fff}
+.pc-h img{width:30px;height:30px;border-radius:50%;flex:none}
+.pc-h b{display:block;font-size:13px;line-height:1.1}.pc-h small{display:block;font-size:11px;opacity:.6}
+.pc-h svg{width:14px;height:14px;margin-left:auto;opacity:.8}
+.pc-t{color:#fff;font-weight:600;font-size:clamp(15px,1.6vw,20px);line-height:1.2;letter-spacing:-.02em}
+.pc-n{color:rgba(255,255,255,.65);font-size:12.5px;line-height:1.35}
+.pcard{padding:22px;background:linear-gradient(150deg,#14205e,#070b26);display:flex;flex-direction:column;gap:10px}
+.thumbs .th.tx{padding:6px;gap:2px}.thumbs .pc-h,.thumbs .pc-n{display:none}.thumbs .pc-t{font-size:9px}
+.gth.tx .pc-n,.gth.tx .pc-h small{display:none}.gth.tx .pc-t{font-size:11px}
+.pc .im .th.tx .pc-t{font-size:16px}
+
+/* ---- TV stat channels ---- */
+.screen{container-type:size}
+.ch.stat{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2cqh;background:repeating-conic-gradient(from 0deg at 50% 120%,rgba(255,255,255,.07) 0 6deg,transparent 6deg 12deg),radial-gradient(80% 90% at 50% 40%,#3D74FF,#1238C9 55%,#06123F);color:#fff;overflow:hidden}
+.ch.stat .sn{font:800 40cqh/1 var(--f);letter-spacing:-.06em;background:linear-gradient(180deg,#fff 30%,#BFD0FF);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 .6cqh 1.6cqh rgba(0,10,60,.6));margin-top:4cqh}
+.ch.stat small{font:600 8cqh/1 var(--fm);letter-spacing:.14em;color:#D8E3FF}
+.ch.stat .lb{position:absolute;left:5cqw;top:6cqh;display:flex;align-items:center;gap:2cqw;font:700 6.5cqh/1 var(--fm);letter-spacing:.1em;background:#FF3B4E;color:#fff;padding:1.6cqh 2.6cqw;border-radius:1.4cqh}
+.ch.stat .lb i{width:3cqh;height:3cqh;border-radius:50%;background:#fff;animation:rec 1s infinite}
+.ch.stat .sm{position:absolute;left:0;right:0;bottom:0;height:13cqh;background:rgba(3,8,30,.75);display:flex;align-items:center;overflow:hidden;white-space:nowrap}
+.ch.stat .sm span{flex:none;font:600 6.5cqh/1 var(--fm);letter-spacing:.08em;color:#AFC2FF;padding-right:2cqw;animation:sm 6s linear infinite}
+@keyframes sm{to{transform:translateX(-100%)}}
+.hkpi b{background:linear-gradient(180deg,#fff 35%,#AFC2FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hkpi div:first-child b::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#FF3B4E;box-shadow:0 0 8px #FF3B4E;margin-right:7px;vertical-align:middle;animation:rec 1.6s infinite}
+/* ---- closer: curved horizon that blurs into the page ---- */
+.closer{position:relative;overflow:hidden;isolation:isolate;margin-top:40px;padding:110px 20px 0;text-align:center;background:linear-gradient(180deg,var(--bg) 0%,var(--bg) 44%,color-mix(in srgb,var(--bg) 70%,#5B82FF) 54%,#3557D9 63%,#13216E 72%,#0A1240 80%,#050820 100%)}
+.cl-in{position:relative;z-index:2;max-width:720px;margin:0 auto}
+.cl-in h2{font-size:clamp(34px,5vw,62px);line-height:1.02;letter-spacing:-.045em;margin:18px 0 14px}
+.cl-in p{color:var(--mute);font-size:17px;max-width:46ch;margin:0 auto}
+.cl-in .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.horizon{position:relative;height:clamp(220px,28vw,360px);margin:30px -20px 0;pointer-events:none}
+.horizon .glow1{position:absolute;left:50%;top:38%;width:140%;height:260%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(50% 50% at 50% 50%,transparent 62%,rgba(90,140,255,.55) 66%,rgba(31,91,255,.18) 72%,transparent 80%);filter:blur(22px)}
+.horizon .ring{position:absolute;left:50%;top:44%;width:130%;height:250%;transform:translateX(-50%);border-radius:50%;box-shadow:0 -24px 70px -12px rgba(110,160,255,.65),inset 0 40px 90px -30px rgba(90,140,255,.55);background:radial-gradient(60% 40% at 50% 0%,rgba(40,70,200,.45),transparent 70%),#060A26;filter:blur(7px);-webkit-mask:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent)}
+.ccards{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:900px;margin:-110px auto 0}
+.cc{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:18px 20px;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;text-decoration:none;text-align:left;font:inherit;cursor:pointer;box-shadow:0 20px 40px -20px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.08);transition:transform .3s,border-color .3s,background .3s;position:relative}
+.cc:hover{transform:translateY(-3px);border-color:rgba(143,176,255,.6);background:rgba(255,255,255,.09)}
+.cc span{font:500 10.5px var(--fm);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.cc b{font-weight:500;font-size:15.5px;word-break:break-all}
+.cc em{position:absolute;right:14px;top:16px;font:500 10px var(--fm);font-style:normal;color:#8FB0FF;letter-spacing:.06em}
+.cfoot{position:relative;z-index:2;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;max-width:1160px;margin:0 auto;padding:56px 0 calc(28px + env(safe-area-inset-bottom,0px));color:rgba(255,255,255,.5);font-size:13px}
+.cfoot a{color:rgba(255,255,255,.75);text-decoration:none}
+@media (max-width:700px){.ccards{grid-template-columns:1fr;margin-top:-80px;max-width:420px}.horizon{height:200px}.cfoot{justify-content:center;text-align:center;padding-top:40px}.closer{padding-top:80px}}
 </style>
 </head>
 <body>
@@ -634,10 +683,10 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
     <div class="screen" id="screen">
       <div class="ch on" data-t="5600"><canvas id="pfpc" role="img" aria-label="B2"></canvas></div>
       <div class="ch logo" data-t="1300"><img src="a/l-immutable.webp" alt=""></div>
-      <div class="ch txt" data-t="1300"><span>800K+<small>COLLAB VIEWS</small></span></div>
+      <div class="ch stat" data-t="1900"><span class="lb"><i></i>LIVE</span><b class="sn" data-n="800" data-s="K+">800K+</b><small>COLLAB VIEWS</small><span class="sm"><span>IMMUTABLE · PLAYEMBER · FOGO · PEAQ · IRYS · TOKYO BEAST · XOCIETY · </span><span>IMMUTABLE · PLAYEMBER · FOGO · PEAQ · IRYS · TOKYO BEAST · XOCIETY · </span></span></div>
       <div class="ch logo w" data-t="1300"><img src="a/l-playember.webp" alt=""></div>
       <div class="ch logo" data-t="1300"><img src="a/l-bmr.webp" alt=""></div>
-      <div class="ch txt" data-t="1300"><span>30+<small>BRANDS</small></span></div>
+      <div class="ch stat" data-t="1900"><span class="lb"><i></i>LIVE</span><b class="sn" data-n="30" data-s="+">30+</b><small>BRANDS GROWN</small><span class="sm"><span>GAMING · L1s · DePIN · DATA · CONSUMER CRYPTO · TRADING · INFOFI · </span><span>GAMING · L1s · DePIN · DATA · CONSUMER CRYPTO · TRADING · INFOFI · </span></span></div>
       <div class="ch logo" data-t="1300"><img src="a/l-xociety.webp" alt=""></div>
       <div class="nz"></div>
     </div>
@@ -681,7 +730,7 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
 </section>
 
 <section class="sec" id="bring">
-  <div class="head rv"><span class="chl"><i></i>CH 02<b>What I bring a team</b></span><h2>Five things <span class="blue">you get from day one.</span></h2><p>A founder or marketing lead isn't hiring posts. They're hiring someone who can move people from "what is this?" to "I'm in."</p></div>
+  <div class="head rv"><span class="chl"><i></i>CH 02<b>What I bring to a team</b></span><h2>Five things <span class="blue">you get from day one.</span></h2><p>A founder or marketing lead isn't hiring posts. They're hiring someone who can move people from "what is this?" to "I'm in."</p></div>
   <div class="caps">
     <div class="cap bl rv"><span class="n">01</span><h4>I explain products so people get them</h4><p>Complex launches, tokens and mechanics, broken down until a newcomer can follow and take the next step.</p><span class="ev">Immutable 5M thread · 7.2K views</span></div>
     <div class="cap rv"><span class="n">02</span><h4>I make people curious enough to try</h4><p>Hooks, early-access pushes and how-to guides that turn a scroll into a first click.</p><span class="ev">Fogo how-to-play guide</span></div>
@@ -805,12 +854,23 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
   </div>
 </section>
 
-<section class="sec" id="contact">
-  <div class="band rv"><h3>Got a product that needs users?</h3><p>Tell me what you're launching and who it's for. I'll tell you how I'd get them in.</p><div class="btns"><a class="btn btn-w" href="https://x.com/b2nuel" target="_blank" rel="noopener">DM me on X</a><a class="btn btn-o" href="mailto:calminuel@gmail.com">calminuel@gmail.com</a><button class="btn btn-o" id="dc" type="button">Discord: b23613</button></div><div class="copied" id="copied"></div></div>
-</section>
 </main>
 
-<footer><div class="in"><span>© 2026 B2 · @b2nuel</span><span><a href="https://x.com/b2nuel" target="_blank" rel="noopener">X</a><a href="mailto:calminuel@gmail.com">Email</a><a href="#top">Back to top</a></span></div></footer>
+<section class="closer" id="contact">
+  <div class="cl-in rv">
+    <span class="chl"><i></i>CH 10<b>Work with me</b></span>
+    <h2>Got a product that <span class="blue">needs users?</span></h2>
+    <p>Tell me what you're launching and who it's for. I'll tell you exactly how I'd get them in.</p>
+    <div class="btns"><a class="btn btn-b" href="https://x.com/b2nuel" target="_blank" rel="noopener">DM me on X <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a class="btn btn-g" href="mailto:calminuel@gmail.com">Send an email</a></div>
+  </div>
+  <div class="horizon" aria-hidden="true"><i class="glow1"></i><i class="ring"></i></div>
+  <div class="ccards">
+    <a class="cc" href="https://x.com/b2nuel" target="_blank" rel="noopener"><span>X</span><b>@b2nuel</b></a>
+    <button class="cc" id="dc" type="button"><span>Discord</span><b>b23613</b><em id="copied">Tap to copy</em></button>
+    <a class="cc" href="mailto:calminuel@gmail.com"><span>Email</span><b>calminuel@gmail.com</b></a>
+  </div>
+  <div class="cfoot"><span>© 2026 B2</span><span>Content · Campaigns · Community</span><a href="#top">Back to top ↑</a></div>
+</section>
 
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Role posts"><div class="dhead" id="dHead"></div><div class="dlist" id="dList"></div></aside>
@@ -835,14 +895,14 @@ const ROLES=[
   pts:["Ecosystem explainers and data threads, like the 5M users breakdown","Spotlights for games launching on Immutable: Engines of Fury, Project O, OverKnights, RavenIdle","Pitching builders on why to launch on Immutable","Hero program renewed after more than a year"],
   tags:["Ambassador","Threads","Game spotlights"],
   posts:[
-   {img:"a/p-hero.webp",id:"1985687037886763412",t:"Hero program, renewed",n:"Immutable renewed my Hero program after a year in it."},
-   {img:"a/p-5m.webp",id:"1911369716892921894",t:"Immutable hits 5M users",n:"Overview thread on Immutable Passport passing 5M users.",v:"7.2K"},
-   {img:"a/p-lead.webp",id:"1963199137077133452",t:"Is Immutable quietly taking the lead?",n:"Where Immutable stands in web3 gaming, and why.",v:"4.9K"},
-   {img:"a/p-eof.webp",id:"1981723385420816565",t:"Engines of Fury",n:"Spotlight on an Immutable-backed game."},
-   {txt:1,id:"1952390925155701014",t:"If you're launching a game, pivot to Immutable",n:"A builder-facing pitch for launching on Immutable."},
-   {img:"a/p-projecto.webp",id:"1958560451710644668",t:"Project O launches on Immutable",n:"Launch coverage for Project O.",v:"1.9K"},
-   {img:"a/p-overknights.webp",id:"1948431944934474085",t:"OverKnights on IMX",n:"Game spotlight for OverKnights."},
-   {img:"a/p-ravenidle.webp",id:"1941107040249598361",t:"RavenIdle creator leaderboard",n:"Immutable Play creator leaderboard push."}
+   {img:"a/p-hero.webp",id:"1985687037886763412",shot:"a/s-hero.webp",t:"Hero program, renewed",n:"Immutable renewed my Hero program after a year in it."},
+   {img:"a/p-5m.webp",id:"1911369716892921894",shot:"a/s-5m.webp",t:"Immutable hits 5M users",n:"Overview thread on Immutable Passport passing 5M users.",v:"7.2K"},
+   {img:"a/p-lead.webp",id:"1963199137077133452",shot:"a/s-lead.webp",t:"Is Immutable quietly taking the lead?",n:"Where Immutable stands in web3 gaming, and why.",v:"4.9K"},
+   {img:"a/p-eof.webp",id:"1981723385420816565",shot:"a/s-eof.webp",t:"Engines of Fury",n:"Spotlight on an Immutable-backed game."},
+   {img:"a/s-pivot.webp",id:"1952390925155701014",shot:"a/s-pivot.webp",t:"If you're launching a game, pivot to Immutable",n:"A builder-facing pitch for launching on Immutable."},
+   {img:"a/p-projecto.webp",id:"1958560451710644668",shot:"a/s-projecto.webp",t:"Project O launches on Immutable",n:"Launch coverage for Project O.",v:"1.9K"},
+   {img:"a/p-overknights.webp",id:"1948431944934474085",shot:"a/s-overknights.webp",t:"OverKnights on IMX",n:"Game spotlight for OverKnights."},
+   {img:"a/p-ravenidle.webp",id:"1941107040249598361",shot:"a/s-ravenidle.webp",t:"RavenIdle creator leaderboard",n:"Immutable Play creator leaderboard push."}
   ]},
  {k:"pe",name:"PlayEmber",role:"Content Creator, Moderator & SMM",when:"2023 to now",sector:"Consumer crypto",img:"a/p-playember.webp",logo:"a/l-playember.webp",c:"#0B1B4D",
   head:"The voice behind a 1M+ user brand.",
@@ -858,7 +918,7 @@ const ROLES=[
   posts:[
    {img:"a/x-fogohow.webp",id:"2008179740256117067",t:"How to play: earn $FISH",n:"Step-by-step guide to the fishing game, with the FOGO airdrop angle."},
    {txt:1,id:"2008179821168525712",t:"8 days to the FOGO TGE",n:"Countdown post, in partnership with Kronicles."},
-   {txt:1,id:"2008179805322158326",t:"The first game on Fogo",n:"Launch post introducing the game."}
+   {img:"a/x-fogoblock.webp",id:"2008179805322158326",t:"The first game on Fogo",n:"Why the first game on Fogo is worth trying: quick to start, your entry ticket to the chain, and the fastest blocks around."}
   ]},
  {k:"peaq",name:"peaq",role:"Campaign Creator",when:"2025",sector:"DePIN",img:"a/x-peaq.webp",ini:"pq",c:"#2546D6",
   head:"Getting people into DePIN's Get Real season.",
@@ -872,9 +932,9 @@ const ROLES=[
   pts:["Detailed Irys thread for the Kaito leaderboard","Questland tasks completed and shared","Follow-ups pushing for the top Kaito spots"],
   tags:["InfoFi","Kaito","Quests"],
   posts:[
-   {img:"a/p-irys.webp",id:"1946481531804955016",t:"Irys on Kaito, the full thread",n:"A detailed breakdown of Irys.",v:"1.3K"},
-   {img:"a/p-questland.webp",id:"1970115359962186228",t:"Irys Questland",n:"Questland tasks completed, with how to join."},
-   {txt:1,id:"1946646030268723233",t:"Top 1 on Kaito is inevitable",n:"Follow-up on the leaderboard push."}
+   {img:"a/p-irys.webp",id:"1946481531804955016",shot:"a/s-irys.webp",t:"Irys on Kaito, the full thread",n:"A detailed breakdown of Irys.",v:"1.3K"},
+   {img:"a/p-questland.webp",id:"1970115359962186228",shot:"a/s-questland.webp",t:"Irys Questland",n:"Questland tasks completed, with how to join."},
+   {img:"a/s-kaito.webp",id:"1946646030268723233",shot:"a/s-kaito.webp",t:"Top 1 on Kaito is inevitable",n:"Follow-up on the leaderboard push."}
   ]},
  {k:"tb",name:"Tokyo Beast",role:"Launch Content Partner",when:"Jun 2025",sector:"Gaming",img:"a/x-tokyo.webp",ini:"TB",c:"#4F46E5",
   head:"A full launch, covered end to end.",
@@ -884,28 +944,28 @@ const ROLES=[
   posts:[
    {img:"a/x-tokyo.webp",id:"1929822556057481366",t:"Special early access",n:"Early access announcement for Tokyo Beast."},
    {img:"a/p-tokyo.webp",id:"1932731382599430455",t:"TOKYOBEAST IS INEVITABLE",n:"The hype post ahead of launch."},
-   {txt:1,id:"1935373596148576583",t:"The launch thread",n:"Kick streamers, Lucky Tickets, how to participate and the game going live."}
+   {img:"a/s-tokyo-thread.webp",id:"1935373596148576583",shot:"a/s-tokyo-thread.webp",t:"The launch thread",n:"Kick streamers, Lucky Tickets, how to participate and the game going live."}
   ]},
  {k:"bmr",name:"Bad Mad Robots & Xociety",role:"Ambassador & Intern",when:"2025 to now",sector:"Gaming",img:"a/p-bmr.webp",logo:"a/l-bmr.webp",c:"#0EA5E9",
   head:"Onboarding gamers into two big communities.",
   sub:"Ambassador and intern for two game communities with 150K+ and 260K+ followers.",
   pts:["Onboarding gamers into both games","Replies and posting for the communities","Ongoing since 2025"],
   tags:["Ambassador","Onboarding"],
-  posts:[{img:"a/p-bmr.webp",id:"1912461992465441196",t:"Bad Mad Robots",n:"Introducing Bad Mad Robots.",v:"5.4K"}]},
+  posts:[{img:"a/p-bmr.webp",id:"1912461992465441196",shot:"a/s-bmr.webp",t:"Bad Mad Robots",n:"Introducing Bad Mad Robots.",v:"5.4K"}]},
  {k:"tx",name:"TxFlow",role:"Points Campaign",when:"2026",sector:"Trading",img:"a/p-txflow.webp",ini:"Tx",c:"#3B82F6",
   head:"Trading content that shows the work.",
   sub:"Personal trading and points posts for TxFlow's Season 1, showing the product in use.",
   pts:["Points Season 1 posts","Real usage, shown in public"],
   tags:["Trading","Points"],
-  posts:[{img:"a/p-txflow.webp",id:"2109617650896609661",t:"TxFlow Points, Season 1",n:"Points progress on TxFlow."}]},
+  posts:[{img:"a/p-txflow.webp",id:"2109617650896609661",shot:"a/s-txflow.webp",t:"TxFlow Points, Season 1",n:"Points progress on TxFlow."}]},
  {k:"spot",name:"Spotlights",role:"Independent Coverage",when:"2024 to 2025",sector:"Gaming",img:"a/p-lolland.webp",ini:"★",c:"#1F5BFF",
   head:"Where my biggest numbers came from.",
   sub:"Coverage I chose to write, including my most viewed post.",
   pts:["LOL Land: 29.9K views","Hunters On-Chain: 11.4K views"],
   tags:["Top posts"],
   posts:[
-   {img:"a/p-lolland.webp",id:"1960291926977974472",t:"LOL Land",n:"My most viewed post.",v:"29.9K"},
-   {img:"a/p-hunters.webp",id:"1851942979788788197",t:"Hunters On-Chain",n:"Coverage of the game.",v:"11.4K"}
+   {img:"a/p-lolland.webp",id:"1960291926977974472",shot:"a/s-lolland.webp",t:"LOL Land",n:"My most viewed post.",v:"29.9K"},
+   {img:"a/p-hunters.webp",id:"1851942979788788197",shot:"a/s-hunters.webp",t:"Hunters On-Chain",n:"Coverage of the game.",v:"11.4K"}
   ]}
 ];
 const TOPS=[["spot",0,"LOL Land",29.9],["spot",1,"Hunters On-Chain",11.4],["imx",1,"Immutable 5M users",7.2],["bmr",0,"Bad Mad Robots",5.4],["imx",2,"Immutable taking the lead?",4.9],["imx",5,"Project O",1.9],["irys",0,"Irys on Kaito",1.3]];
@@ -928,7 +988,8 @@ const secs=['top','impact','cases','work','playbook','said'];
 addEventListener('scroll',()=>{let cur='top';secs.forEach(id=>{const e=document.getElementById(id);if(e&&e.getBoundingClientRect().top<innerHeight*.4)cur=id});$$('#navl a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur))},{passive:true});
 
 /* thumbnails: blurred fill + contained image, so posts never crop */
-const thumb=(p,cls='')=>p.img?`<span class="th ${cls}"><img class="bgx" src="${p.img}" alt="" loading="lazy"><img class="fg" src="${p.img}" alt="${esc(p.t)}" loading="lazy"></span>`:`<span class="th tx ${cls}"><span>${esc(p.t)}</span></span>`;
+const pcard=p=>`<span class="pc-h"><img src="a/pfp.webp" alt=""><span><b>B2</b><small>@b2nuel</small></span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.3zm-1.2 17.9h1.9L7.1 4.2H5.1z"/></svg></span><span class="pc-t">${esc(p.t)}</span><span class="pc-n">${esc(p.n)}</span>`;
+const thumb=(p,cls='')=>p.img?`<span class="th ${cls}"><img class="bgx" src="${p.img}" alt="" loading="lazy"><img class="fg" src="${p.img}" alt="${esc(p.t)}" loading="lazy"></span>`:`<span class="th tx ${cls}">${pcard(p)}</span>`;
 /* channel guide (more work) */
 const MORE=ROLES.map((r,i)=>[r,i]).filter(([r])=>!['imx','pe','fogo'].includes(r.k));
 MORE.forEach(([r,ri0],i)=>{const b=document.createElement('button');b.className='grow';b.dataset.role=r.k;
@@ -962,17 +1023,15 @@ function loadTw(){if(twReady)return twReady;twReady=new Promise(res=>{const s=do
 function openPost(si,k){mS=si;mK=k;const r=ROLES[si],p=r.posts[k];
   $('#mMeta').textContent=`${r.name} · ${k+1} of ${r.posts.length}${p.v?` · ${p.v} views`:''}`;$('#mTitle').textContent=p.t;$('#mLesson').textContent=p.n;
   $('#mX').href=X(p.id);$('#mPrev').disabled=k===0;$('#mNext').disabled=k===r.posts.length-1;
-  $('#mFall').innerHTML=p.img?`<img src="${p.img}" alt="">`:`<div style="padding:28px 22px;font-size:20px;font-weight:600;letter-spacing:-.02em;color:#0B0D12">${esc(p.t)}</div>`;
-  const em=$('#mEmbed'),tw=$('#mTw');em.classList.remove('ready');tw.innerHTML='';const my=++tok;
-  scrim.classList.add('on');modal.classList.add('on');modal.setAttribute('aria-hidden','false');lock(true);
-  loadTw().then(ok=>{if(!ok||my!==tok)return;twttr.widgets.createTweet(p.id,tw,{theme:root.dataset.theme==='dark'?'dark':'light',dnt:true,align:'center',conversation:'none'}).then(el=>{if(el&&my===tok)em.classList.add('ready')})})}
+  $('#mFall').innerHTML=(p.shot||p.img)?`<img src="${p.shot||p.img}" alt="${esc(p.t)}">`:`<div class="pcard">${pcard(p)}</div>`;$('#mFall').scrollTop=0;
+  scrim.classList.add('on');modal.classList.add('on');modal.setAttribute('aria-hidden','false');lock(true)}
 function closePost(){modal.classList.remove('on');modal.setAttribute('aria-hidden','true');tok++;if(!drawer.classList.contains('on')){scrim.classList.remove('on');lock(false)}}
 document.addEventListener('click',e=>{const rr=e.target.closest('[data-role]');if(rr){openDrawer(ri(rr.dataset.role));return}const p=e.target.closest('[data-post]');if(!p)return;const [k,i]=p.dataset.post.split(':');openPost(ri(k),+i)});
 $('#mClose').onclick=closePost;$('#mPrev').onclick=()=>openPost(mS,mK-1);$('#mNext').onclick=()=>openPost(mS,mK+1);
 scrim.onclick=()=>{if(modal.classList.contains('on'))closePost();else closeDrawer()};
 modal.addEventListener('click',e=>{if(e.target===modal)closePost()});
 addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(modal.classList.contains('on'))closePost();else if(drawer.classList.contains('on'))closeDrawer()});
-$('#dc').onclick=()=>{const done=()=>$('#copied').textContent='Discord username copied';navigator.clipboard?navigator.clipboard.writeText('b23613').then(done,()=>$('#copied').textContent='Discord: b23613'):($('#copied').textContent='Discord: b23613')};
+$('#dc').onclick=()=>{const done=()=>$('#copied').textContent='Copied ✓';navigator.clipboard?navigator.clipboard.writeText('b23613').then(done,()=>$('#copied').textContent='Discord: b23613'):($('#copied').textContent='Discord: b23613')};
 
 /* living pfp: eyes look around + blink */
 function livePfp(cv){const S=2,ctx=cv.getContext('2d');cv.width=cv.height=758;
@@ -1018,7 +1077,7 @@ const scr=$('#screen'),chs=$$('#screen .ch');let ci=0;
 setTimeout(()=>{scr.classList.add('boot');setTimeout(()=>scr.classList.remove('boot'),1300);if(!RM)setTimeout(next,+chs[0].dataset.t)},500);
 function next(){const order=[0,1,0,2,0,3,0,4,0,5,0,6];ci=(ci+1)%order.length;const k=order[ci];
   scr.classList.remove('flick');void scr.offsetWidth;scr.classList.add('flick');
-  setTimeout(()=>chs.forEach((c,j)=>c.classList.toggle('on',j===k)),110);
+  setTimeout(()=>{chs.forEach((c,j)=>c.classList.toggle('on',j===k));const sn=chs[k].querySelector('.sn');if(sn){const to=+sn.dataset.n,s=sn.dataset.s,t0=performance.now();(function f(t){const q=Math.min(1,(t-t0)/900);sn.textContent=Math.round(to*(1-Math.pow(1-q,3)))+s;if(q<1)requestAnimationFrame(f)})(t0)}},110);
   setTimeout(next,k===0?5600:+chs[k].dataset.t)}
 /* sky: twinkle, fireflies, shooting stars */
 const cv=$('#sky'),cx=cv.getContext('2d');let stars=[],flies=[],shoot=null,DPR=Math.min(2,devicePixelRatio||1);
