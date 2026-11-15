@@ -7,7 +7,7 @@
 <meta name="description" content="B2 (@b2nuel): web3 growth and content marketer. I help web3 products get discovered, understood and adopted. 30+ brands, 800K+ collab views, Immutable Hero renewed, PlayEmber SMM.">
 <meta name="theme-color" content="#0A1240">
 <meta property="og:type" content="website">
-<meta property="og:title" content="B2 · I help web3 products get discovered, understood & adopted">
+<meta property="og:title" content="B2 · Growing Web3 brands through content, campaigns & community">
 <meta property="og:description" content="Web3 growth & content marketer. 30+ brands · 800K+ collab views · Immutable, PlayEmber, Fogo, peaq, Irys.">
 <meta property="og:image" content="https://b2nuel.vercel.app/a/og.jpg">
 <meta property="og:url" content="https://b2nuel.vercel.app">
@@ -378,7 +378,7 @@ main.rails{border-top:0}
 .screen{position:absolute;left:45.57%;top:53.24%;width:9.22%;height:11.76%;border-radius:13%/17%;overflow:hidden;background:#fff4c8;box-shadow:0 0 30px 6px rgba(255,214,130,.55),0 0 120px 30px rgba(120,150,255,.25)}
 .ch{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .12s}
 .ch.on{opacity:1}
-.ch img{width:100%;height:100%;object-fit:cover}
+.ch img,.ch canvas{width:100%;height:100%;object-fit:cover;object-position:50% 58%;display:block}
 .ch.logo{background:#0B0D12}.ch.logo img{width:62%;height:62%;object-fit:contain}
 .ch.logo.w{background:#fff}
 .ch.txt{background:linear-gradient(135deg,#1F5BFF,#0B1B4D);font:700 clamp(10px,1.4vw,22px)/1 var(--f);letter-spacing:-.03em;color:#fff;text-align:center}
@@ -508,8 +508,8 @@ main.rails{border-top:0}
 
 /* ---- centered hero copy + growth toggle ---- */
 .hcopy{position:absolute;left:0;right:0;top:64px;bottom:40%;padding:0 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.hcopy h1{margin:16px auto 0;font-size:clamp(34px,5vw,68px);line-height:1.02;letter-spacing:-.045em;font-weight:600;max-width:none;text-shadow:0 2px 30px rgba(5,8,30,.5)}
-.hcopy h1 .g{white-space:nowrap}
+.hcopy h1{margin:16px auto 0;font-size:clamp(32px,4.6vw,64px);line-height:1.02;letter-spacing:-.045em;font-weight:600;max-width:none;text-shadow:0 2px 30px rgba(5,8,30,.5)}
+.hcopy h1 .g{white-space:nowrap}.hcopy h1 .ln{display:block}
 .hcopy .scr{margin:10px auto 0;font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(22px,2.5vw,34px);line-height:1.2;color:#D6E1FF;text-shadow:0 2px 24px rgba(5,8,30,.6);animation:up 1s .9s both;max-width:30ch}
 .hlede{margin:12px auto 0}
 .hcopy .cta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:22px;animation:up 1s 1.1s both}
@@ -535,9 +535,9 @@ main.rails{border-top:0}
 .day .veil{opacity:.6}
 #sky,.veil{transition:opacity 1.4s}
 .hbot{bottom:clamp(28px,5vh,56px)}
-@media (max-width:760px){.hcopy{top:56px;bottom:43%}.hcopy h1{font-size:clamp(34px,10vw,46px)}.hcopy .scr{font-size:22px;max-width:18ch}.hcopy .cta{margin-top:16px}.hcopy .cta .btn{height:40px;padding:0 15px;font-size:14px}}
+@media (max-width:760px){.hcopy{top:56px;bottom:43%}.hcopy h1{font-size:clamp(28px,8.2vw,36px);line-height:1.08}.hcopy h1 .ln{display:inline}.hcopy .scr{display:none}.hcopy .scr{font-size:22px;max-width:18ch}.hcopy .cta{margin-top:16px}.hcopy .cta .btn{height:40px;padding:0 15px;font-size:14px}}
 @media (max-width:760px) and (max-height:760px){.hcopy .pill{display:none}.hcopy .scr{font-size:20px}.hcopy .cta .btn-g{display:none}}
-@media (min-width:761px) and (max-height:820px){.hlede{display:none}.hcopy .scr{font-size:clamp(20px,2.2vw,28px)}.hcopy h1{font-size:clamp(32px,4.4vw,60px)}}
+@media (min-width:761px) and (max-height:820px){.hlede{display:none}.hcopy .scr{font-size:clamp(20px,2.2vw,28px)}.hcopy h1{font-size:clamp(30px,4vw,54px)}}
 @media (max-height:600px){.hkpi{display:none}}
 .slat-tabs button{white-space:nowrap;flex:none}
 .band .btn-o{background:transparent}
@@ -555,13 +555,13 @@ main.rails{border-top:0}
     <img src="a/hero.webp" srcset="a/hero-sm.webp 1280w, a/hero.webp 1920w" sizes="100vw" alt="" fetchpriority="high">
     <div class="dawn"></div><div class="glow"></div>
     <div class="screen" id="screen">
-      <div class="ch on" data-t="4200"><img src="a/pfp.webp" alt="B2"></div>
-      <div class="ch logo" data-t="1500"><img src="a/l-immutable.webp" alt=""></div>
-      <div class="ch txt" data-t="1500"><span>800K+<small>COLLAB VIEWS</small></span></div>
-      <div class="ch logo w" data-t="1500"><img src="a/l-playember.webp" alt=""></div>
-      <div class="ch logo" data-t="1500"><img src="a/l-bmr.webp" alt=""></div>
-      <div class="ch txt" data-t="1500"><span>30+<small>BRANDS</small></span></div>
-      <div class="ch logo" data-t="1500"><img src="a/l-xociety.webp" alt=""></div>
+      <div class="ch on" data-t="5600"><canvas id="pfpc" role="img" aria-label="B2"></canvas></div>
+      <div class="ch logo" data-t="1300"><img src="a/l-immutable.webp" alt=""></div>
+      <div class="ch txt" data-t="1300"><span>800K+<small>COLLAB VIEWS</small></span></div>
+      <div class="ch logo w" data-t="1300"><img src="a/l-playember.webp" alt=""></div>
+      <div class="ch logo" data-t="1300"><img src="a/l-bmr.webp" alt=""></div>
+      <div class="ch txt" data-t="1300"><span>30+<small>BRANDS</small></span></div>
+      <div class="ch logo" data-t="1300"><img src="a/l-xociety.webp" alt=""></div>
       <div class="nz"></div>
     </div>
   </div>
@@ -569,8 +569,8 @@ main.rails{border-top:0}
   <div class="veil"></div>
   <div class="frame"><i></i><i></i><i></i><i></i></div>
   <div class="hcopy" id="hcopy">
-    <span class="pill" style="animation:up .9s .3s both"><i></i>B2 · @b2nuel</span>
-    <h1 id="h1"><span class="ln">Web3 <span class="g">gr<button class="tg" id="tg" aria-label="Switch the scene between night and day" aria-pressed="true"><span class="cl"></span><span class="k"></span></button>wth</span> &amp; content marketer.</span></h1>
+    <span class="pill" style="animation:up .9s .3s both"><i></i>B2 · Web3 growth &amp; content marketer</span>
+    <h1 id="h1"><span class="ln"><span class="g">Gr<button class="tg" id="tg" aria-label="Switch the scene between night and day" aria-pressed="true"><span class="cl"></span><span class="k"></span></button>wing</span> Web3 brands through</span> <span class="ln">content, campaigns &amp; community.</span></h1>
     <p class="scr">I help web3 products get discovered, understood &amp; adopted.</p>
     <p class="hlede">Content, social and community that turn attention into people who actually use the product.</p>
     <div class="cta"><a class="btn btn-b" href="#cases">See the case studies <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a class="btn btn-g" href="#contact">Work with me</a></div>
@@ -897,6 +897,31 @@ modal.addEventListener('click',e=>{if(e.target===modal)closePost()});
 addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(modal.classList.contains('on'))closePost();else if(drawer.classList.contains('on'))closeDrawer()});
 $('#dc').onclick=()=>{const done=()=>$('#copied').textContent='Discord username copied';navigator.clipboard?navigator.clipboard.writeText('b23613').then(done,()=>$('#copied').textContent='Discord: b23613'):($('#copied').textContent='Discord: b23613')};
 
+/* living pfp: eyes look around + blink */
+function livePfp(cv){const S=2,ctx=cv.getContext('2d');cv.width=cv.height=758;
+  const E={l:{c:[179,227],r:[36,29],ic:[178,226],ir:[30,29],max:8},r:{c:[276,224],r:[22,26],ic:[270,224],ir:[19,27],max:6}};
+  const ld=s=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=s});
+  let base,il,ir,look=0,lookT=0,blink=0;
+  Promise.all([ld('a/pfp-base.webp'),ld('a/iris-l.png'),ld('a/iris-r.png')]).then(([b,a,c])=>{base=b;il=a;ir=c;E.l.img=il;E.r.img=ir;draw();sched()});
+  function draw(){if(!base)return;ctx.drawImage(base,0,0);
+    for(const k of ['l','r']){const e=E[k],[cx,cy]=e.c,[rx,ry]=e.r;ctx.save();ctx.beginPath();ctx.ellipse(cx*S,cy*S,rx*S,ry*S,0,0,6.283);ctx.clip();
+      const dx=look*e.max*S,dy=Math.abs(look)*1.2*S;ctx.drawImage(e.img,(e.ic[0]-e.ir[0])*S+dx,(e.ic[1]-e.ir[1])*S+dy);
+      // soft shadow under the upper lid
+      const g=ctx.createLinearGradient(0,(cy-ry)*S,0,(cy-ry*.35)*S);g.addColorStop(0,'rgba(40,20,70,.35)');g.addColorStop(1,'rgba(40,20,70,0)');ctx.fillStyle=g;ctx.fillRect((cx-rx)*S,(cy-ry)*S,rx*2*S,ry*S);
+      if(blink>0){const h=(ry*2+2)*blink*S,top=(cy-ry-1)*S;ctx.fillStyle='#08D3EE';ctx.fillRect((cx-rx-2)*S,top,(rx*2+4)*S,h);
+        ctx.strokeStyle='#14244a';ctx.lineWidth=3*S;ctx.beginPath();ctx.moveTo((cx-rx)*S,top+h);ctx.quadraticCurveTo(cx*S,top+h+(blink>.85?4*S:2*S),(cx+rx)*S,top+h);ctx.stroke()}
+      ctx.restore()}}
+  function tween(from,to,ms,set){return new Promise(r=>{const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/ms),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;set(from+(to-from)*e);draw();p<1?requestAnimationFrame(f):r()})(t0)})}
+  const wait=ms=>new Promise(r=>setTimeout(r,ms));
+  async function doBlink(){await tween(0,1,70,v=>blink=v);await wait(40);await tween(1,0,110,v=>blink=v)}
+  async function sched(){const seq=[async()=>{await tween(look,-1,260,v=>look=v);await wait(700);await tween(-1,0,240,v=>look=v)},
+      async()=>{await tween(look,1,260,v=>look=v);await wait(700);await tween(1,0,240,v=>look=v)},
+      async()=>{await tween(look,-1,240,v=>look=v);await wait(380);await tween(-1,1,380,v=>look=v);await wait(420);await tween(1,0,240,v=>look=v)},
+      doBlink,doBlink];
+    for(;;){if(RM)return;await wait(700+Math.random()*1300);await seq[Math.floor(Math.random()*seq.length)]();if(Math.random()<.45){await wait(160);await doBlink()}}}
+  return {set:(l,b)=>{look=l;blink=b;draw()}}}
+
+livePfp($('#pfpc'));
 /* ---------- HERO SCENE ---------- */
 const hero=$('#top'),scene=$('#scene'),AR=1920/1080;let base={x:0,y:0},par={x:0,y:0},sp=0;
 function fit(){const vw=hero.clientWidth,vh=hero.clientHeight,mob=vw<760;let w=Math.max(vw,vh*AR)*(mob?1.0:1.1),h=w/AR;
@@ -917,7 +942,7 @@ setTimeout(()=>{scr.classList.add('boot');setTimeout(()=>scr.classList.remove('b
 function next(){const order=[0,1,0,2,0,3,0,4,0,5,0,6];ci=(ci+1)%order.length;const k=order[ci];
   scr.classList.remove('flick');void scr.offsetWidth;scr.classList.add('flick');
   setTimeout(()=>chs.forEach((c,j)=>c.classList.toggle('on',j===k)),110);
-  setTimeout(next,k===0?3600:+chs[k].dataset.t)}
+  setTimeout(next,k===0?5600:+chs[k].dataset.t)}
 /* sky: twinkle, fireflies, shooting stars */
 const cv=$('#sky'),cx=cv.getContext('2d');let stars=[],flies=[],shoot=null,DPR=Math.min(2,devicePixelRatio||1);
 function sizeSky(){cv.width=hero.clientWidth*DPR;cv.height=hero.clientHeight*DPR;const W=cv.width,H=cv.height;
