@@ -681,12 +681,43 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
 :root[data-theme="dark"] .cc{box-shadow:0 24px 48px -24px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.05)}
 .cfoot{color:var(--dim)}.cfoot a{color:var(--mute)}
 @media (max-width:700px){.ccards{margin-top:40px!important}}
+
+.tagx.real{border-style:solid;border-color:color-mix(in srgb,#2BD27A 50%,transparent);color:#1FAE63}
+.fr span em{font-style:normal;font:500 10.5px var(--fm);opacity:.75;margin-left:6px;letter-spacing:.06em;text-transform:uppercase}
+.rcpt{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:14px;align-items:stretch}
+.rtable{border:1px solid var(--line);border-radius:22px;background:var(--surface);box-shadow:var(--shadow-lg);padding:10px 22px 16px}
+.rth,.rtr{display:grid;grid-template-columns:70px minmax(0,1fr) 110px 70px;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.rth{font:500 11px var(--fm);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.rtr:last-child{border-bottom:0}
+.rtr .n{font:500 12px var(--fm);color:var(--blue)}
+.rtr .im{display:grid;grid-template-columns:minmax(0,1fr) 64px;align-items:center;gap:12px;text-align:right;font-variant-numeric:tabular-nums;font-size:14.5px}
+.rtr .im i{flex:1;height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden;position:relative}
+.rtr .im i::after{content:"";position:absolute;inset:0;width:var(--w);background:linear-gradient(90deg,var(--blue),var(--blue-2));border-radius:inherit;transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.2,.7,.2,1) var(--d)}
+.rtable.on .rtr .im i::after{transform:none}
+.rtr .lc{font-weight:600;font-variant-numeric:tabular-nums}
+.rtr .ct{font:500 12.5px var(--fm);color:var(--mute)}
+.rtr.tot{border-top:1px solid var(--line-2);margin-top:4px}.rtr.tot .n{color:var(--ink);font-weight:600}.rtr.tot .im,.rtr.tot .lc{font-weight:700}
+.rnote{border:1px solid var(--line);border-radius:22px;padding:24px;background:linear-gradient(160deg,var(--blue-soft),var(--surface) 70%);box-shadow:var(--shadow);font-size:15px;color:var(--mute);line-height:1.6}
+.rnote b{display:block;color:var(--ink);font-size:18px;letter-spacing:-.01em;margin-bottom:8px}
+.shots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:14px}
+.shot{padding:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#0B0B0F;cursor:zoom-in;text-align:left;box-shadow:var(--shadow-lg);transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
+.shot:hover{transform:translateY(-4px);box-shadow:0 30px 60px -24px rgba(31,91,255,.45)}
+.shot img{width:100%;height:auto;flex:1;object-fit:contain;background:#0B0B0F}
+.shot span{display:block;padding:12px 14px;background:var(--surface);color:var(--mute);font-size:12.5px;border-top:1px solid var(--line)}
+.shot span b{display:block;color:var(--ink);font-size:15px;font-weight:600;margin-bottom:2px}
+.lbx{position:fixed;inset:0;z-index:200;background:rgba(3,6,20,.86);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:24px}
+.lbx.on{display:flex}.lbx img{max-width:min(92vw,520px);max-height:88vh;border-radius:18px;box-shadow:0 40px 80px -20px rgba(0,0,0,.8)}
+.lbx button{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:24px;cursor:pointer}
+@media (max-width:900px){.rcpt{grid-template-columns:1fr}.shots{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.rth,.rtr{grid-template-columns:44px minmax(0,1fr) 62px 48px;gap:10px}.rtable{padding:6px 14px 10px}.rth{font-size:10px}.rtr .im{font-size:13px}}
+.rbig{display:grid;gap:14px;margin-top:22px}.rbig div{border-top:1px solid var(--line);padding-top:14px}.rbig strong{display:block;font-size:34px;font-weight:600;letter-spacing:-.04em;color:var(--ink);line-height:1}.rbig span{font-size:13px}
+.rtr.tot .im{grid-template-columns:1fr}
 </style>
 </head>
 <body>
 <header class="nav" id="nav"><div class="in">
   <a class="logo" href="#top"><b><img src="a/pfp.webp" alt=""></b>B2</a>
-  <nav id="navl"><a href="#top" class="on">Home</a><a href="#impact">Impact</a><a href="#cases">Case studies</a><a href="#work">Work</a><a href="#playbook">Playbook</a><a href="#said">Reviews</a></nav>
+  <nav id="navl"><a href="#top" class="on">Home</a><a href="#impact">Impact</a><a href="#cases">Case studies</a><a href="#work">Work</a><a href="#receipts">Receipts</a><a href="#said">Reviews</a></nav>
   <div class="r"><a class="btn btn-b" href="#contact">Work with me</a><button class="tt" id="tt" aria-label="Switch light or dark theme"><svg class="moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13.5 9.5A5.5 5.5 0 016.5 2.5a5.5 5.5 0 107 7z"/></svg><svg class="sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M13 3l-1 1M4 12l-1 1"/></svg></button></div>
 </div></header>
 
@@ -805,7 +836,7 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
 </section>
 
 <section class="sec" id="playbook">
-  <div class="head rv"><span class="chl"><i></i>CH 06<b>Playbook</b></span><h2>How a campaign <span class="blue">runs with me.</span></h2><p>Four steps, the same every time. The goal is always the last bar on the right.</p></div>
+  <div class="head rv"><span class="chl"><i></i>CH 06<b>Playbook</b></span><h2>How a campaign <span class="blue">runs with me.</span></h2><p>Four steps, the same every time. The goal is always the bottom bar: people who actually use the product.</p></div>
   <div class="play">
     <div class="steps">
       <div class="st rv"><span class="ic">01</span><div><h4>Use it first</h4><p>I play the game, bridge the token or finish the quest before I write a word.</p></div></div>
@@ -814,19 +845,35 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
       <div class="st rv"><span class="ic">04</span><div><h4>Stay for the follow-up</h4><p>Replies, Discord questions and reminders. That's where readers become users.</p></div></div>
     </div>
     <div class="funnel rv" id="funnel">
-      <div class="top"><b>Campaign funnel</b><span class="tagx">Illustrative example</span></div>
-      <div class="fr"><span>Impressions</span><b>15K–35K</b></div>
-      <div class="fr"><span>Profile visits</span><b>300–800</b></div>
-      <div class="fr"><span>Link clicks</span><b>100–350</b></div>
-      <div class="fr"><span>Sign-ups</span><b>20–80</b></div>
-      <div class="fr"><span>Active users</span><b>15–60</b></div>
-      <small>Planning ranges for a single campaign at my reach, shown to explain the approach. Not results from a specific client.</small>
+      <div class="top"><b>Campaign results</b><span class="tagx real">From X analytics</span></div>
+      <div class="fr"><span>Impressions</span><b>86,000</b></div>
+      <div class="fr"><span>Link clicks</span><b>201</b></div>
+      <div class="fr"><span>Sign-ups <em>est.</em></span><b>50–100</b></div>
+      <div class="fr"><span>Active users <em>est.</em></span><b>30–70</b></div>
+      <small>Across 7 paid campaign posts. Impressions and link clicks are from X analytics; sign-ups and active users are estimated from the campaigns' tracking.</small>
     </div>
   </div>
 </section>
+<section class="sec" id="receipts">
+  <div class="head rv"><span class="chl"><i></i>CH 07<b>Receipts</b></span><h2>Clicks you can <span class="blue">check.</span></h2><p>Seven paid campaign posts, then the analytics behind them. Tap any card to see it full size.</p></div>
+  <div class="rcpt">
+    <div class="rtable rv" id="rtable">
+      <div class="rth"><span>Post</span><span>Impressions</span><span>Link clicks</span><span>CTR</span></div>
+    </div>
+    <div class="rnote rv"><b>Why the clicks sit in the replies.</b> My campaign links go in the thread replies, under the main post, so the people clicking are the ones who read all the way through. The headline post pulls the reach; the reply does the converting.<div class="rbig"><div><strong>201</strong><span>link clicks from paid posts</span></div><div><strong>0.41%</strong><span>best click-through rate</span></div><div><strong>4</strong><span>campaigns shown below, with their analytics</span></div></div></div>
+  </div>
+  <div class="shots">
+    <button class="shot rv" data-shot="a/r-lolland.webp"><img src="a/r-lolland.webp" alt="LOL Land campaign analytics" loading="lazy"><span><b>LOL Land</b>52 link clicks · 1,129 impressions</span></button>
+    <button class="shot rv" data-shot="a/r-tokyobeast.webp"><img src="a/r-tokyobeast.webp" alt="Tokyo Beast campaign analytics" loading="lazy"><span><b>Tokyo Beast</b>53 link clicks · 663 impressions</span></button>
+    <button class="shot rv" data-shot="a/r-boomland.webp"><img src="a/r-boomland.webp" alt="Boom Land campaign analytics" loading="lazy"><span><b>Boom Land × Game7</b>30 link clicks · 576 impressions</span></button>
+    <button class="shot rv" data-shot="a/r-immutable.webp"><img src="a/r-immutable.webp" alt="Immutable Play campaign analytics" loading="lazy"><span><b>Immutable Play</b>28 link clicks · 833 impressions</span></button>
+  </div>
+</section>
+<div class="lbx" id="lbx"><img alt=""><button aria-label="Close">×</button></div>
+
 
 <section class="sec" id="journey">
-  <div class="head rv"><span class="chl"><i></i>CH 07<b>Journey</b></span><h2>Three years. <span class="blue">Still compounding.</span></h2><p>Every role led to the next. Here's how it stacked.</p></div>
+  <div class="head rv"><span class="chl"><i></i>CH 08<b>Journey</b></span><h2>Three years. <span class="blue">Still compounding.</span></h2><p>Every role led to the next. Here's how it stacked.</p></div>
   <div class="bento rv">
     <div class="step"><span class="ic">01</span><div class="yr" style="margin-top:16px">2023</div><h4 style="margin-top:6px">PlayEmber</h4><p>Started as a content creator and moderator, and grew into running their socials.</p></div>
     <div class="step"><span class="ic">02</span><div class="yr" style="margin-top:16px">2024</div><h4 style="margin-top:6px">Immutable partnership</h4><p>Signed for six months. They extended it, with content gigs for games built on Immutable.</p></div>
@@ -838,7 +885,7 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
 </section>
 
 <section class="sec" id="principles">
-  <div class="head rv"><span class="chl"><i></i>CH 08<b>How I think</b></span><h2>Awareness is easy. <span class="blue">Adoption is the job.</span></h2><p>Three rules behind every post and every reply.</p></div>
+  <div class="head rv"><span class="chl"><i></i>CH 09<b>How I think</b></span><h2>Awareness is easy. <span class="blue">Adoption is the job.</span></h2><p>Three rules behind every post and every reply.</p></div>
   <div class="bento ess rv">
     <div class="es"><div class="big">01</div><h4>Use it first</h4><p>People can tell when you haven't. I don't write about anything I haven't touched.</p></div>
     <div class="es"><div class="big">02</div><h4>Write for the newcomer</h4><p>If someone new can't follow the post and take the next step, it didn't do its job.</p></div>
@@ -848,7 +895,7 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
 </section>
 
 <section class="sec" id="said">
-  <div class="head rv"><span class="chl"><i></i>CH 09<b>What teams say</b></span><h2>Straight from <span class="blue">the DMs.</span></h2><p>Unedited messages from the people I've worked with.</p></div>
+  <div class="head rv"><span class="chl"><i></i>CH 10<b>What teams say</b></span><h2>Straight from <span class="blue">the DMs.</span></h2><p>Unedited messages from the people I've worked with.</p></div>
   <div class="revs">
     <article class="rcard rv">
       <div class="hd"><img src="a/r-auli.webp" alt="Auli"><div><b>Auli</b><span>Marketing Lead, Immutable</span></div><span class="via">Telegram</span></div>
@@ -872,7 +919,7 @@ main.rails{border-left:0;border-right:0;max-width:none;margin:0}
 
 <section class="closer" id="contact">
   <div class="cl-in rv">
-    <span class="chl"><i></i>CH 10<b>Work with me</b></span>
+    <span class="chl"><i></i>CH 11<b>Work with me</b></span>
     <h2>Got a product that <span class="blue">needs users?</span></h2>
     <p>Tell me what you're launching and who it's for. I'll tell you exactly how I'd get them in.</p>
     <div class="btns"><a class="btn btn-b" href="https://x.com/b2nuel" target="_blank" rel="noopener">DM me on X <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a class="btn btn-g" href="mailto:calminuel@gmail.com">Send an email</a></div>
@@ -997,7 +1044,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
 (()=>{const m=TOPS[0][3];$('#bars').innerHTML=TOPS.map(([k,p,n,v],i)=>`<button class="br" data-post="${k}:${p}"><span>${n}</span><i style="--w:${(v/m*100).toFixed(1)}%;--d:${i*.08}s"></i><b>${v}K</b></button>`).join('')})();
 $$('.rv,.bars').forEach(e=>io.observe(e));
 /* nav highlight */
-const secs=['top','impact','cases','work','playbook','said'];
+const secs=['top','impact','cases','work','receipts','said'];
 addEventListener('scroll',()=>{let cur='top';secs.forEach(id=>{const e=document.getElementById(id);if(e&&e.getBoundingClientRect().top<innerHeight*.4)cur=id});$$('#navl a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur))},{passive:true});
 
 /* thumbnails: blurred fill + contained image, so posts never crop */
@@ -1109,6 +1156,14 @@ function sky(t){const W=cv.width,H=cv.height;cx.clearRect(0,0,W,H);
     const a=Math.max(0,1-k/45);g.addColorStop(0,`rgba(255,255,255,${a})`);g.addColorStop(1,'rgba(255,255,255,0)');cx.strokeStyle=g;cx.lineWidth=1.4*DPR;cx.beginPath();cx.moveTo(shoot.x+dx,shoot.y+dy);cx.lineTo(shoot.x+dx-120*DPR,shoot.y+dy-48*DPR);cx.stroke();if(k>45)shoot=null}
   if(!RM&&sp<1)requestAnimationFrame(sky);else if(!RM)setTimeout(()=>requestAnimationFrame(sky),300)}
 requestAnimationFrame(sky);
+
+/* receipts */
+(()=>{const R=[[30000,52],[12000,30],[14000,27],[6000,13],[13000,53],[5000,17],[6000,9]];const m=30000;
+ const f=n=>n.toLocaleString('en-US');let h='';R.forEach(([i,c],k)=>{h+=`<div class="rtr"><span class="n">#${k+1}</span><span class="im"><i style="--w:${(i/m*100).toFixed(1)}%;--d:${k*.07}s"></i>${f(i)}</span><span class="lc">${c}</span><span class="ct">${(c/i*100).toFixed(2)}%</span></div>`});
+ const ti=R.reduce((a,r)=>a+r[0],0),tc=R.reduce((a,r)=>a+r[1],0);h+=`<div class="rtr tot"><span class="n">Total</span><span class="im"><b>${f(ti)}</b></span><span class="lc">${tc}</span><span class="ct">${(tc/ti*100).toFixed(2)}%</span></div>`;
+ document.getElementById('rtable').insertAdjacentHTML('beforeend',h);
+ const lb=document.getElementById('lbx');document.querySelectorAll('[data-shot]').forEach(b=>b.addEventListener('click',()=>{lb.querySelector('img').src=b.dataset.shot;lb.classList.add('on')}));
+ lb.addEventListener('click',e=>{if(e.target!==lb.querySelector('img'))lb.classList.remove('on')});addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')})})();
 </script>
 </body>
 </html>
